@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="echarts-all.js"></script>
+    <script src="bootstrap-input-spinner/bootstrap-input-spinner.js"></script>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main container">
+        <br>
+        <div class="container">
+            <h1>Temperature</h1>
+          <div class="row w-100">
+            <div class="col-sm">
+                <div class="card w-100" style="display: inline-block;">
+                    <div class="card-body">
+                        <h5 class="card-title">Room 1</h5>
+                        <div id="data1" style="margin-right:auto; margin-left:auto;width:500px; height: 300px;"></div>
+                        <div id="data1-spinner" style="margin-right:auto; margin-left:auto; width:250px;height:250px;"></div>
+                        <div class="spine_box">
+                            <input type="number" value="15" min="-30" max="+30" step="1"/>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="col-sm">
+                <div class="card w-100" style="display: inline-block; ">
+                    <div class="card-body">
+                        <h5 class="card-title">Room 2</h5>
+                        <div id="data2" style="margin-right:auto; margin-left:auto;width:500px; height: 300px;"></div>
+                        <div id="data2-spinner" style="margin-right:auto; margin-left:auto; width:250px;height:250px;"></div>
+                        <div class="spine_box2">
+                            <input type="number" value="15" min="-30" max="+30" step="1"/>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-sm">
+                <div class="card w-100" style="display: inline-block;">
+                    <div class="card-body">
+                        <h5 class="card-title">Room 3</h5>
+                        <div id="data3" style="margin-right:auto; margin-left:auto;width:500px; height: 300px;"></div>
+                        <div id="data3-spinner" style="margin-right:auto; margin-left:auto; width:250px;height:250px;"></div>
+                        <div class="spine_box3">
+                            <input type="number" value="15" min="-30" max="+30" step="1"/>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+          </div>
+        </div> 
+
+        <br>
+
+        <div class="container">
+            <h1>Давление</h1>
+            <div class="row w-100">
+                <div class="col-sm">
+                    <div class="card w-100" style="display: inline-block;">
+                    <div class="card-body">
+                        <h5 class="card-title">Давление</h5>
+                        <div id="data4" style="margin-right:auto; margin-left:auto;width:400px; height: 300px;"></div>
+                        <div id="data4-spinner" style="margin-right:auto; margin-left:auto; width:250px;height:250px;"></div>
+                        <div class="spine_box4">
+                            <input type="number" value="15" min="-30" max="+30" step="1"/>
+                        </div>
+                    </div>
+                </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="data2.js"></script>
+    <script src="data3.js"></script>
+    <script src="data4.js"></script>
+    <script>
+        $("input[type='number']").inputSpinner()
+    </script>
+</body>
+</html>
